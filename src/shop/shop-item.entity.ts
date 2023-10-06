@@ -32,4 +32,9 @@ export class ShopItem {
     default: 0,
   })
   boughtCounter: number;
+
+  @Column({
+    default: false,
+  })
+  wasEverBought: boolean;
 }

@@ -17,7 +17,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       entities: ['dist/**/**.entity{.ts,.js}'],
       bigNumberStrings: false,
       logging: true,
+      ///////////////////////
       synchronize: true,
+      migrations: ['dist/migration/*.js'],
+      // cli: {
+      //   migrationsDir: 'migration',
+      // },
+      // migrations: [__dirname + '/migrations/*{.js,.ts}'],
     }),
     BasketModule,
     ShopModule,

@@ -17,7 +17,10 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json", 
+    "typeorm:migration:generate": "ts-node ./node_modules/typeorm migration:generate -n NewVersionOfShopEntity",
+    "typeorm:migration:run": "tsc && node ./node_modules/typeorm migration:run",
+    "typeorm:migration:revert": "tsc && node ./node_modules/typeorm migration:revert"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
